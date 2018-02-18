@@ -53,9 +53,7 @@ final class Main {
 	    	 System.out.println("Please only use integer values. ");
 	     } catch (NegativeArraySizeException e) {
 	    	 System.out.println("Negative Array Size.");
-	     }  
-		
-	
+	     }  			
 	}
     
 }
