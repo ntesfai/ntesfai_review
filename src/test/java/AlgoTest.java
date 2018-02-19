@@ -18,13 +18,13 @@ class AlgoTest {
     public void sameSize() {
         SortDemoData data = new SortDemoData();
         data.initializeArray("2 3 4");
-        Item[] copyOfMyArray = new Item[data.myArray.length];
+        Item[] copyOfMyArray = new Item[data.getArray().length];
         System.arraycopy(
-                data.myArray, 0, copyOfMyArray, 0, data.myArray.length);
+                data.getArray(), 0, copyOfMyArray, 0, data.getArray().length);
         
-        SortAlgos.bubbleSort(data.myArray);
+        SortAlgos.bubbleSort(data.getArray());
         
-        assertTrue(data.myArray.length == copyOfMyArray.length);
+        assertTrue(data.getArray().length == copyOfMyArray.length);
     }
     
     /**
@@ -49,10 +49,10 @@ class AlgoTest {
         array[1] = new Item(4);
         array[2] = new Item(3);
         SortAlgos.bubbleSort(array);
-        System.out.println(array[0].key);
-        assertTrue(array[0].key == 3);
-        assertTrue(array[1].key == 4);
-        assertTrue(array[2].key == 5);
+        System.out.println(array[0].getKey());
+        assertTrue(array[0].getKey() == 3);
+        assertTrue(array[1].getKey() == 4);
+        assertTrue(array[2].getKey() == 5);
     }
 }
 
