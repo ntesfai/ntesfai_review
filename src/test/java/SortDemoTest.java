@@ -20,13 +20,13 @@ class SortDemoTest {
     @Test
     public void testNumber() {
        data.initializeArray("20");
-       assertTrue(data.myArray.length == 20);
+       assertTrue(data.getArray().length == 20);
        
        data.initializeArray("30");
-       assertTrue(data.myArray.length == 30);
+       assertTrue(data.getArray().length == 30);
        
        data.initializeArray("0");
-       assertTrue(data.myArray.length == 0);
+       assertTrue(data.getArray().length == 0);
     }
 
 
@@ -84,10 +84,10 @@ class SortDemoTest {
         
         SortDemoData data2 = new SortDemoData();
         data2.initializeArray("5 64 4");
-        assertTrue(data.myArray.length == 3);
-        assertTrue(data.myArray[0].key == data2.myArray[0].key );
-        assertTrue(data.myArray[1].key == data2.myArray[1].key );
-        assertTrue(data.myArray[2].key == data2.myArray[2].key );
+        assertTrue(data.getArray().length == 3);
+        assertTrue(data.getArray()[0].getKey() == data2.getArray()[0].getKey() );
+        assertTrue(data.getArray()[1].getKey() == data2.getArray()[1].getKey() );
+        assertTrue(data.getArray()[2].getKey() == data2.getArray()[2].getKey() );
     }
     
     
@@ -102,15 +102,15 @@ class SortDemoTest {
     public void wrongChoice() {
         data.initializeArray("5 8 5 4");  
         data.runAlgo(-10);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(-1);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(0);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(6);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(100);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
     }
     
     /**
@@ -120,17 +120,17 @@ class SortDemoTest {
     public void correctAlgo() {
         data.initializeArray("5 8 4");  
         data.runAlgo(0);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(1);
-        assertTrue(data.algo.equals("Selection Sort"));
+        assertTrue(data.getAlgo().equals("Selection Sort"));
         data.runAlgo(2);
-        assertTrue(data.algo.equals("Insertion Sort"));
+        assertTrue(data.getAlgo().equals("Insertion Sort"));
         data.runAlgo(3);
-        assertTrue(data.algo.equals("Merge Sort"));
+        assertTrue(data.getAlgo().equals("Merge Sort"));
         data.runAlgo(4);
-        assertTrue(data.algo.equals("Quick Sort"));
+        assertTrue(data.getAlgo().equals("Quick Sort"));
         data.runAlgo(5);
-        assertTrue(data.algo.equals("Heap Sort"));
+        assertTrue(data.getAlgo().equals("Heap Sort"));
     }
 
   
@@ -141,17 +141,17 @@ class SortDemoTest {
     public void correctAttribute() {
         data.initializeArray("5 8 5 4");  
         data.runAlgo(0);
-        assertTrue(data.algo.equals("Bubble Sort"));
+        assertTrue(data.getAlgo().equals("Bubble Sort"));
         data.runAlgo(1);
-        assertTrue(data.algo.equals("Selection Sort"));
+        assertTrue(data.getAlgo().equals("Selection Sort"));
         data.runAlgo(2);
-        assertTrue(data.algo.equals("Insertion Sort"));
+        assertTrue(data.getAlgo().equals("Insertion Sort"));
         data.runAlgo(3);
-        assertTrue(data.algo.equals("Merge Sort"));
+        assertTrue(data.getAlgo().equals("Merge Sort"));
         data.runAlgo(4);
-        assertTrue(data.algo.equals("Quick Sort"));
+        assertTrue(data.getAlgo().equals("Quick Sort"));
         data.runAlgo(5);
-        assertTrue(data.algo.equals("Heap Sort"));
+        assertTrue(data.getAlgo().equals("Heap Sort"));
     }
 
 }
